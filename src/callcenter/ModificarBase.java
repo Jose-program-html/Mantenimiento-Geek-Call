@@ -55,6 +55,7 @@ public class ModificarBase extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setPreferredSize(new java.awt.Dimension(582, 410));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
@@ -138,7 +139,7 @@ public class ModificarBase extends javax.swing.JFrame {
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));
         jLabel2.setMinimumSize(new java.awt.Dimension(630, 410));
         jLabel2.setPreferredSize(new java.awt.Dimension(630, 410));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 590, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-119, -105, 820, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -147,8 +148,8 @@ public class ModificarBase extends javax.swing.JFrame {
         // TODO add your handling code here:
         
         UIManager UI=new UIManager();
-        UI.put("OptionPane.background",new ColorUIResource(0,51,51));
-        UI.put("Panel.background",new ColorUIResource(0,51,51));
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
         String titulo, mensaje;
         if(texto2.getText().length()!=0)
         {

@@ -32,8 +32,8 @@ public class Contenido13 extends javax.swing.JInternalFrame {
      */
     public Contenido13() {
         initComponents();
-        UI.put("OptionPane.background", new ColorUIResource(0, 51, 51));
-        UI.put("Panel.background", new ColorUIResource(0, 51, 51));
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
     }
 
     /**

@@ -82,7 +82,7 @@ public class Panel2 extends javax.swing.JInternalFrame {
                 boton1MouseExited(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 170, -1));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, 170, -1));
 
         boton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Clientesatendidos1.png"))); // NOI18N
         boton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -98,7 +98,7 @@ public class Panel2 extends javax.swing.JInternalFrame {
                 boton2MouseExited(evt);
             }
         });
-        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 170, -1));
+        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 170, -1));
 
         boton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/Clientes sinsolucion1.png"))); // NOI18N
         boton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
@@ -114,7 +114,7 @@ public class Panel2 extends javax.swing.JInternalFrame {
                 boton3MouseExited(evt);
             }
         });
-        getContentPane().add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 170, -1));
+        getContentPane().add(boton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 170, -1));
 
         PanelContenido.setMaximumSize(new java.awt.Dimension(630, 430));
         PanelContenido.setMinimumSize(new java.awt.Dimension(630, 430));
@@ -135,7 +135,7 @@ public class Panel2 extends javax.swing.JInternalFrame {
         getContentPane().add(PanelContenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 620, 400));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondopaneles.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 400));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 200, 375));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 400));

@@ -120,80 +120,70 @@ public class Contenido43 extends javax.swing.JInternalFrame {
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));
         jLabel2.setMinimumSize(new java.awt.Dimension(630, 410));
         jLabel2.setPreferredSize(new java.awt.Dimension(630, 410));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 820, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseClicked
         // TODO add your handling code here:
-        UIManager UI=new UIManager();
-        UI.put("OptionPane.background",new ColorUIResource(0,51,51));
-        UI.put("Panel.background",new ColorUIResource(0,51,51));
-        String titulo,mensaje;
-        
-        String resultado1="",resultado2="";
+        UIManager UI = new UIManager();
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
+        String titulo, mensaje;
+        String resultado1 = "", resultado2 = "";
         //Si la base existe y el submenu
-        EstructuraBD.conexion c= new EstructuraBD.conexion();
-        resultado1=c.busquedaespecifica("casos", "nombre", "nombre='"+base.getText()+"'");
-        if(base.getText().length()!=0&&submenu.getText().length()!=0)
-        {   if (resultado1!=null)
-                {
-                
-                    resultado2=c.busquedaespecifica("menu", "idmenu", "idmenu="+submenu.getText());
-                    if(resultado2!=null)
-                    {
-                    
-                    Clases.VariablesCasos.base=base.getText();
-                    Clases.VariablesCasos.submenu=submenu.getText();
-                    ModificarBase m= new ModificarBase();
+        EstructuraBD.conexion c = new EstructuraBD.conexion();
+        resultado1 = c.busquedaespecifica("casos", "nombre", "nombre='" + base.getText() + "'");
+        if (base.getText().length() != 0 && submenu.getText().length() != 0) {
+            if (resultado1 != null) {
+                resultado2 = c.busquedaespecifica("menu", "idmenu", "idmenu=" + submenu.getText());
+                if (resultado2 != null) {
+
+                    Clases.VariablesCasos.base = base.getText();
+                    Clases.VariablesCasos.submenu = submenu.getText();
+                    ModificarBase m = new ModificarBase();
                     m.show();
-                    }
-                    else
-                    {   titulo="Submenu no valido!";
-                        mensaje="<html><font color=#FFFFFF>El submenu indicado no se encontro en la base de informacion.";
-                        JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-                    }
+                } else {
+                    titulo = "Submenu no valido!";
+                    mensaje = "<html><font color=#FFFFFF>El submenu indicado no se encontro en la base de informacion.";
+                    JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
                 }
-            
-                else
-                {   titulo="Base no valida!";
-                    mensaje="<html><font color=#FFFFFF>Nombre de base no encontrado.";
-                    JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-                }
-            
+            } else {
+                titulo = "Base no valida!";
+                mensaje = "<html><font color=#FFFFFF>Nombre de base no encontrado.";
+                JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+            }
+
+        } else {
+            titulo = "Campos vacios!";
+            mensaje = "<html><font color=#FFFFFF>Debe colocar el nombre de la base y el submenu.";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
         }
-        else
-        {   titulo="Campos vacios!";
-            mensaje="<html><font color=#FFFFFF>Debe colocar el nombre de la base y el submenu.";
-            JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-        }
-        
         //si no
         //mandar mensaje de que no existe x cosa
     }//GEN-LAST:event_boton3MouseClicked
 
     private void boton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseEntered
         // TODO add your handling code here:
-        boton3.setIcon(new ImageIcon(getClass().getResource( "/recursos/continuar2.png" )));
+        boton3.setIcon(new ImageIcon(getClass().getResource("/recursos/continuar2.png")));
     }//GEN-LAST:event_boton3MouseEntered
 
     private void boton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MouseExited
         // TODO add your handling code here:
 
-        boton3.setIcon(new ImageIcon(getClass().getResource( "/recursos/continuar1.png" )));
+        boton3.setIcon(new ImageIcon(getClass().getResource("/recursos/continuar1.png")));
     }//GEN-LAST:event_boton3MouseExited
 
     private void submenuKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_submenuKeyPressed
         // TODO add your handling code here:
-        char c; 
+        char c;
 
-            c=evt.getKeyChar(); 
-                if(c<'0'|| c>'9') 
-                { 
-                    evt.consume();//ignora el caracter digitado 
-                } 
-        
+        c = evt.getKeyChar();
+        if (c < '0' || c > '9') {
+            evt.consume();//ignora el caracter digitado 
+        }
+
     }//GEN-LAST:event_submenuKeyPressed
 
     private void baseKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_baseKeyPressed

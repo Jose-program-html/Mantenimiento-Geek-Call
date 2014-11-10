@@ -104,6 +104,7 @@ public class Base_de_datos_metodos {
            return false;
        }
    }
+   
    public boolean administradores(){
        int row=0;
        try{
@@ -125,7 +126,8 @@ public class Base_de_datos_metodos {
            return false;
        }
    }
-    public boolean log(int tipo, String usu, int pass){
+    
+   public boolean log(int tipo, String usu, int pass){
         int row=0;
         String tipo_usu="",usu_tipo="",pass_tipo="";
         switch(tipo){
@@ -163,7 +165,8 @@ public class Base_de_datos_metodos {
            return false;
        }
    }
-    public void join(String usu, int pass, int tipo){
+    
+   public void join(String usu, int pass, int tipo){
         String tipo_usu="",usu_tipo="",pass_tipo="";
         switch(tipo){
             case 1:tipo_usu="superusuario";

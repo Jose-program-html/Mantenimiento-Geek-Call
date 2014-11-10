@@ -69,11 +69,11 @@ public class Contenido42 extends javax.swing.JInternalFrame {
         base.setBackground(new java.awt.Color(219, 253, 253));
         base.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         base.setCaretColor(new java.awt.Color(255, 255, 255));
-        getContentPane().add(base, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 190, 30));
+        getContentPane().add(base, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 160, 190, 30));
 
         jLabel3.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel3.setText("Nombre de base");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 220, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 210, 30));
 
         boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/baja1.png"))); // NOI18N
         boton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -88,38 +88,35 @@ public class Contenido42 extends javax.swing.JInternalFrame {
                 boton1MouseExited(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 280, -1));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 160, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));
         jLabel2.setMinimumSize(new java.awt.Dimension(630, 410));
         jLabel2.setPreferredSize(new java.awt.Dimension(630, 410));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 820, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseClicked
         // TODO add your handling code here:
-        
-        if(base.getText().length()!=0)
-        {
-            Clases.VariablesCasos.base="";
-            Clases.VariablesCasos.base=base.getText();
+
+        if (base.getText().length() != 0) {
+            Clases.VariablesCasos.base = "";
+            Clases.VariablesCasos.base = base.getText();
             Clases.VariablesCasos.bajabases();
             base.setText("");
             base.setFocusable(true);
-        }
-        else
-        {
-             UIManager UI=new UIManager();
-             UI.put("OptionPane.background",new ColorUIResource(0,51,51));
-             UI.put("Panel.background",new ColorUIResource(0,51,51));
-            String titulo="Campo vacios!";
-            String mensaje="<html><font color=#FFFFFF>Debe colocar el nombre de la base.";
+        } else {
+            UIManager UI = new UIManager();
+            UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+            UI.put("Panel.background", new ColorUIResource(110, 149, 164));
+            String titulo = "Campo vacios!";
+            String mensaje = "<html><font color=#FFFFFF>Debe colocar el nombre de la base.";
             base.setFocusable(true);
-            JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-            
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+
         }
     }//GEN-LAST:event_boton1MouseClicked
 

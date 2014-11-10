@@ -32,8 +32,8 @@ public class Contenido11 extends javax.swing.JInternalFrame {
      */
     public Contenido11() {
         initComponents();
-        UI.put("OptionPane.background", new ColorUIResource(0, 51, 51));
-        UI.put("Panel.background", new ColorUIResource(0, 51, 51));
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
         jPasswordField1.setEditable(false);
         jPasswordField3.setEditable(false);
     }

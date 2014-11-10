@@ -1,8 +1,5 @@
 package callcenter;
 
-
-
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
@@ -19,21 +16,22 @@ import javax.swing.plaf.ColorUIResource;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author Mariana Valencia
  */
 public class Contenido41 extends javax.swing.JInternalFrame {
+
     private JComponent Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
-    private Dimension dimBarra = null; 
+    private Dimension dimBarra = null;
+
     /**
      * Creates new form Contenido11
      */
     public Contenido41() {
         initComponents();
         nombrebase.setFocusable(true);
-        
+
     }
 
     /**
@@ -81,7 +79,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menusbase.setBackground(new java.awt.Color(0, 51, 51));
+        menusbase.setBackground(new java.awt.Color(48, 87, 87));
         menusbase.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         menusbase.setMaximumRowCount(10);
         menusbase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -103,7 +101,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         nombrebase.setBackground(new java.awt.Color(224, 253, 253));
         nombrebase.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         nombrebase.setToolTipText("Inserte aqui el nombre asignado para la base de informacion");
-        nombrebase.setCaretColor(new java.awt.Color(255, 255, 255));
+        nombrebase.setBorder(null);
         getContentPane().add(nombrebase, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 190, 30));
 
         boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/continuar1.png"))); // NOI18N
@@ -121,7 +119,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
                 boton1MouseExited(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 290, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel4.setText("Menus totales:");
@@ -136,8 +134,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         descripcion.setColumns(20);
         descripcion.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         descripcion.setRows(5);
-        descripcion.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        descripcion.setCaretColor(new java.awt.Color(255, 255, 255));
+        descripcion.setBorder(null);
         jScrollPane1.setViewportView(descripcion);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 360, 180));
@@ -160,136 +157,116 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         getContentPane().add(botonayuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 30, -1, 30));
         botonayuda.getAccessibleContext().setAccessibleDescription("¿Nececitas ayuda con esto?");
 
-        jLabel1.setFont(new java.awt.Font("Courier New", 3, 10)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Courier New", 3, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Ayuda");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, -1, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 12, 50, 20));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));
         jLabel2.setMinimumSize(new java.awt.Dimension(630, 410));
         jLabel2.setPreferredSize(new java.awt.Dimension(630, 410));
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 410));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, -160, 820, 620));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseClicked
         // TODO add your handling code here:
-        
-        
-        UIManager UI=new UIManager();
-        UI.put("OptionPane.background",new ColorUIResource(0,51,51));
-        UI.put("Panel.background",new ColorUIResource(0,51,51));
-        
+        UIManager UI = new UIManager();
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
         String titulo = "";
-        String mensaje="";
-        if(nombrebase.getText().length()==0)
-        {
-            if(descripcion.getText().length()==0)
-            {
-            titulo="Campos vacios!";
-            mensaje="<html><font color=#FFFFFF>Debe colocar el nombre de la base y la descripcion de la voz.";
-            nombrebase.setFocusable(true);
+        String mensaje = "";
+        if (nombrebase.getText().length() == 0) {
+            if (descripcion.getText().length() == 0) {
+                titulo = "Campos vacios!";
+                mensaje = "<html><font color=#FFFFFF>Debe colocar el nombre de la base y la descripcion de la voz.";
+                nombrebase.setFocusable(true);
+            } else {
+                titulo = "Campos vacios!";
+                mensaje = "<html><font color=#FFFFFF>Debe colocar el nombre de la base.";
+                nombrebase.setFocusable(true);
             }
-            else
-            {
-            titulo="Campos vacios!";
-            mensaje="<html><font color=#FFFFFF>Debe colocar el nombre de la base.";
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+        } else if (descripcion.getText().length() == 0) {
+            titulo = "Campos vacios!";
+            mensaje = "<html><font color=#FFFFFF>Debe colocar la descripcion de la voz.";
             nombrebase.setFocusable(true);
-            }
-            JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-        }
-        else if(descripcion.getText().length()==0)
-        {
-            titulo="Campos vacios!";
-            mensaje="<html><font color=#FFFFFF>Debe colocar la descripcion de la voz.";
-            nombrebase.setFocusable(true);
-            JOptionPane.showMessageDialog(null,mensaje,titulo,JOptionPane.INFORMATION_MESSAGE);
-            
-        }
-        
-        else
-        {
-        String mensaje1 = "<html><font color=#FFFFFF>Usted esta a punto de dar de alta la base "+nombrebase.getText()+" con "+menusbase.getSelectedItem()+" menu(s) principal(es)</font>";
-        String mensaje2 = "<html><font color=#FFFFFF>Recurde que el texto de descripcion de voz sera referencia para grabar despues, incluyendo los numeros de marcacion.</font>";
-        String mensaje3="<html><font color=#FFFFFF>Una vez iniciando el proceso de registro se tendra que terminar.Si todo es correcto presione SI. ";
-        String mensaje4="<html><font color=#FFFFFF>De lo contrario presione NO para regresar y acuda al boton de ayuda.</font>";
-        titulo = "Mensaje de confirmacion!";
-        mensaje=mensaje1+"\n"+mensaje2+"\n"+mensaje3+"\n"+mensaje4;
-
-            int respuesta = JOptionPane.showConfirmDialog(null, mensaje, titulo, JOptionPane.YES_NO_OPTION,JOptionPane.INFORMATION_MESSAGE );
-            if (respuesta == JOptionPane.YES_OPTION)
-            {
-                Clases.VariablesCasos.base=nombrebase.getText();
-                Clases.VariablesCasos.descripcion=descripcion.getText();
-                Clases.VariablesCasos.menuprincipal=Integer.parseInt(menusbase.getSelectedItem().toString());
-                int caso=Clases.VariablesCasos.altasbase();
+            JOptionPane.showMessageDialog(null, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            String mensaje1 = "<html><font color=#FFFFFF>Usted esta a punto de dar de alta la base " + nombrebase.getText() + " con " + menusbase.getSelectedItem() + " menu(s) principal(es)</font>";
+            String mensaje2 = "<html><font color=#FFFFFF>Recurde que el texto de descripcion de voz sera referencia para grabar despues, incluyendo los numeros de marcacion.</font>";
+            String mensaje3 = "<html><font color=#FFFFFF>Una vez iniciando el proceso de registro se tendra que terminar.Si todo es correcto presione SI. ";
+            String mensaje4 = "<html><font color=#FFFFFF>De lo contrario presione NO para regresar y acuda al boton de ayuda.</font>";
+            titulo = "Mensaje de confirmacion!";
+            mensaje = mensaje1 + "\n" + mensaje2 + "\n" + mensaje3 + "\n" + mensaje4;
+            int respuesta = JOptionPane.showConfirmDialog(null, mensaje, titulo, JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE);
+            if (respuesta == JOptionPane.YES_OPTION) {
+                Clases.VariablesCasos.base = nombrebase.getText();
+                Clases.VariablesCasos.descripcion = descripcion.getText();
+                Clases.VariablesCasos.menuprincipal = Integer.parseInt(menusbase.getSelectedItem().toString());
+                int caso = Clases.VariablesCasos.altasbase();
                 nombrebase.setText("");
                 descripcion.setText("");
                 menusbase.setSelectedIndex(0);
-                AltaBases a= new AltaBases();
-                a.opcion(Clases.VariablesCasos.menuprincipal,caso);
-                a.titulo.setText("Opcionnes del menu "+Clases.VariablesCasos.base);
+                AltaBases a = new AltaBases();
+                a.opcion(Clases.VariablesCasos.menuprincipal, caso);
+                a.titulo.setText("Opcionnes del menu " + Clases.VariablesCasos.base);
                 a.show();
-                
             }
-        } 
+        }
     }//GEN-LAST:event_boton1MouseClicked
 
     private void boton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseEntered
         // TODO add your handling code here:
-        boton1.setIcon(new ImageIcon(getClass().getResource( "/recursos/continuar2.png" )));
+        boton1.setIcon(new ImageIcon(getClass().getResource("/recursos/continuar2.png")));
     }//GEN-LAST:event_boton1MouseEntered
 
     private void boton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseExited
         // TODO add your handling code here:
-        boton1.setIcon(new ImageIcon(getClass().getResource( "/recursos/continuar1.png" )));
+        boton1.setIcon(new ImageIcon(getClass().getResource("/recursos/continuar1.png")));
     }//GEN-LAST:event_boton1MouseExited
 
     private void botonayudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonayudaMouseEntered
         // TODO add your handling code here:
-        botonayuda.setIcon(new ImageIcon(getClass().getResource( "/recursos/botonayuda2.png" )));
+        botonayuda.setIcon(new ImageIcon(getClass().getResource("/recursos/botonayuda2.png")));
     }//GEN-LAST:event_botonayudaMouseEntered
 
     private void botonayudaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonayudaMouseExited
         // TODO add your handling code here:
-        botonayuda.setIcon(new ImageIcon(getClass().getResource( "/recursos/botonayuda1.png" )));
+        botonayuda.setIcon(new ImageIcon(getClass().getResource("/recursos/botonayuda1.png")));
     }//GEN-LAST:event_botonayudaMouseExited
 
     private void botonayudaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonayudaMouseClicked
         // TODO add your handling code here:
-         
-
- UIManager UI=new UIManager();
- UI.put("OptionPane.background",new ColorUIResource(0,51,51));
- UI.put("Panel.background",new ColorUIResource(0,51,51));
-
-
-        String aux="El nombre de la base se refiere a la manera en que se llamara al menu principal de algun tema de informacion.";
-        String aux2="Los menus totales hacen referencia a la cantidad de opciones principales que tendra dicho tema de informacion";
-        String aux3="La descripcion de voz del menu principal se refiere al contenido en voz que tendran el menu principal.";
-        String aux31="Tome en cuenta que esto es una referencia que posteriormente se grabara.";
-        String aux4= "Ej. Base: *Ayuda*";
-        String aux5="Menus totales: *2*";
-        String aux6="Descripcion de voz de menu:";
-        String aux7="*Bienvenido al menu de Ayuda. Para obtener ayuda marque 1, para terminar marque 2*";
-        String info = "<html><font color=#FFFFFF>"+aux+"</font>";
-        String info1 = "<html><font color=#FFFFFF>"+aux2+"</font>";
-        String info2 = "<html><font color=#FFFFFF>"+aux3+"</font>";
-        String info21 = "<html><font color=#FFFFFF>"+aux31+"</font>";
-        String info3 = "<html><font color=#FFFFFF>"+aux4+"</font>";
-        String info4 = "<html><font color=#FFFFFF>"+aux5+"</font>";
-        String info5 = "<html><font color=#FFFFFF>"+aux6+"</font>";
-        String info6 = "<html><font color=#FFFFFF>"+aux7+"</font>";
-        JOptionPane.showMessageDialog(null,info+"\n"+info1+"\n"+info2+"\n"+info21+"\n\n"+info3+"\n"+info4+"\n"+info5+"\n"+info6,"Informacion sobre la alta de bases",JOptionPane.INFORMATION_MESSAGE);
+        UIManager UI = new UIManager();
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
+        String aux = "El nombre de la base se refiere a la manera en que se llamara al menu principal de algun tema de informacion.";
+        String aux2 = "Los menus totales hacen referencia a la cantidad de opciones principales que tendra dicho tema de informacion";
+        String aux3 = "La descripcion de voz del menu principal se refiere al contenido en voz que tendran el menu principal.";
+        String aux31 = "Tome en cuenta que esto es una referencia que posteriormente se grabara.";
+        String aux4 = "Ej. Base: *Ayuda*";
+        String aux5 = "Menus totales: *2*";
+        String aux6 = "Descripcion de voz de menu:";
+        String aux7 = "*Bienvenido al menu de Ayuda. Para obtener ayuda marque 1, para terminar marque 2*";
+        String info = "<html><font color=#FFFFFF>" + aux + "</font>";
+        String info1 = "<html><font color=#FFFFFF>" + aux2 + "</font>";
+        String info2 = "<html><font color=#FFFFFF>" + aux3 + "</font>";
+        String info21 = "<html><font color=#FFFFFF>" + aux31 + "</font>";
+        String info3 = "<html><font color=#FFFFFF>" + aux4 + "</font>";
+        String info4 = "<html><font color=#FFFFFF>" + aux5 + "</font>";
+        String info5 = "<html><font color=#FFFFFF>" + aux6 + "</font>";
+        String info6 = "<html><font color=#FFFFFF>" + aux7 + "</font>";
+        JOptionPane.showMessageDialog(null, info + "\n" + info1 + "\n" + info2 + "\n" + info21 + "\n\n" + info3 + "\n" + info4 + "\n" + info5 + "\n" + info6, "Informacion sobre la alta de bases", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_botonayudaMouseClicked
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-        Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane(); 
-        dimBarra = Barra.getPreferredSize(); 
-        Barra.setSize(0,0); 
-        Barra.setPreferredSize(new Dimension(0,0)); 
+        Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
+        dimBarra = Barra.getPreferredSize();
+        Barra.setSize(0, 0);
+        Barra.setPreferredSize(new Dimension(0, 0));
         repaint();         // TODO add your handling code here:
     }//GEN-LAST:event_formInternalFrameOpened
 

@@ -1,6 +1,7 @@
 package callcenter;
 
 import EstructuraBD.conexion;
+import SuperUsuario.Base_de_datos_metodos;
 import java.awt.Dimension;
 import java.awt.HeadlessException;
 import java.awt.event.KeyEvent;
@@ -22,7 +23,8 @@ import javax.swing.plaf.ColorUIResource;
 public class Contenido12 extends javax.swing.JInternalFrame {
     
     private String usuario = "";
-    private EstructuraBD.conexion con = new conexion();
+    private boolean contra=false;
+    private SuperUsuario.Base_de_datos_metodos con = new Base_de_datos_metodos();
     private String pass1 = "", pass2 = "", mensaje = "", titulo = "";
     public UIManager UI = new UIManager();
     private JComponent Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
@@ -33,8 +35,8 @@ public class Contenido12 extends javax.swing.JInternalFrame {
      */
     public Contenido12() {
         initComponents();
-        UI.put("OptionPane.background", new ColorUIResource(0, 51, 51));
-        UI.put("Panel.background", new ColorUIResource(0, 51, 51));
+        UI.put("OptionPane.background", new ColorUIResource(110, 149, 164));
+        UI.put("Panel.background", new ColorUIResource(110, 149, 164));
     }
 
     /**
@@ -190,9 +192,11 @@ public class Contenido12 extends javax.swing.JInternalFrame {
 
     private void altasMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_altasMouseClicked
         // TODO add your handling code here:
+        if(contra){
         try {
-            mensaje = "<html><font color=#FFFFFF>Insercion completada";
-            con.agregar("supervisores", "nombre_supervisor,password_supervisor", jTextField2.getText() + "," + pass2);
+            mensaje = "<html><font color=#FFFFFF>Nuevo usuario";
+            int hash=pass2.hashCode();
+            con.log(hash, usuario, hash);
             JOptionPane.showMessageDialog(null, mensaje, "Mensaje Informacion", JOptionPane.INFORMATION_MESSAGE);
             jTextField1.setText("");
             jTextField2.setText("");
@@ -204,7 +208,10 @@ public class Contenido12 extends javax.swing.JInternalFrame {
             jPasswordField3.setEditable(false);
         } catch (HeadlessException e) {
         }
-        
+        }
+        else{
+            
+        }
 
     }//GEN-LAST:event_altasMouseClicked
 
@@ -249,6 +256,7 @@ public class Contenido12 extends javax.swing.JInternalFrame {
 
     private void jPasswordField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jPasswordField1KeyPressed
         // TODO add your handling code here:
+        contra=true;
         mensaje = "<html><font color=#FFFFFF>Difiere campo contraseña";
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
