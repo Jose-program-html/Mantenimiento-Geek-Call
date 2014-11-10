@@ -5,7 +5,7 @@ import javax.swing.ImageIcon;
 import Clases.Reloj;
 import Clases.Variables;
 import javax.swing.JOptionPane;
-import com.sun.awt.AWTUtilities; 
+//import com.sun.awt.AWTUtilities; 
 import java.awt.Color;
 import java.awt.Shape; 
 import java.awt.geom.RoundRectangle2D; 
@@ -345,8 +345,8 @@ public final class ServerMain extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMouseClicked
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        Shape forma = new RoundRectangle2D.Double(0, 0, this.getBounds().width, this.getBounds().height, 100, 100);
-        AWTUtilities.setWindowShape(this, forma);
+        //Shape forma = new RoundRectangle2D.Double(0, 0, this.getBounds().width, this.getBounds().height, 100, 100);
+        //AWTUtilities.setWindowShape(this, forma);
     }//GEN-LAST:event_formComponentShown
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
