@@ -31,7 +31,6 @@ public class Contenido31 extends javax.swing.JInternalFrame {
     public Contenido31() {
         initComponents();
     }
-
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -70,7 +69,6 @@ public class Contenido31 extends javax.swing.JInternalFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/server1.png"))); // NOI18N
-        boton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -83,10 +81,9 @@ public class Contenido31 extends javax.swing.JInternalFrame {
                 boton1MouseExited(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, -1, -1));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, -1, -1));
 
         boton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/servidor2.png"))); // NOI18N
-        boton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -99,7 +96,7 @@ public class Contenido31 extends javax.swing.JInternalFrame {
                 boton2MouseExited(evt);
             }
         });
-        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, -1, -1));
+        getContentPane().add(boton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));
@@ -111,14 +108,13 @@ public class Contenido31 extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MouseClicked
-        if (!SuperUsuario.Variables_globales.servidor_status) {
+        if (!SuperUsuario.Variables_globales.isServidor_status()) {
             Date date = new Date();
             DateFormat hourdateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
             fechaini_server = hourdateFormat.format(date);
             con = new conexion();
             con.agregar("servidor", "inicio,empleado", fechaini_server + "," + SuperUsuario.Variables_globales.getSesion_usuario());
-
-            SuperUsuario.Variables_globales.servidor_status = true;
+            SuperUsuario.Variables_globales.setServidor_status(true);
             ((Hilo_Socket_Servidor) new Hilo_Socket_Servidor()).start();
         }
     }//GEN-LAST:event_boton1MouseClicked
@@ -134,7 +130,7 @@ public class Contenido31 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_boton1MouseExited
 
     private void boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseClicked
-        SuperUsuario.Variables_globales.servidor_status = false;
+        SuperUsuario.Variables_globales.setServidor_status(false);
         Date date = new Date();
         DateFormat hourdateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         fechafin_server = hourdateFormat.format(date);

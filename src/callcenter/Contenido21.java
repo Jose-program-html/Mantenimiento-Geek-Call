@@ -130,7 +130,7 @@ public class Contenido21 extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 350, 160, 30));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 320, 160, 30));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));

@@ -128,6 +128,9 @@ DefaultTableModel modelo;
         try {
             java.util.List lista1 = new ArrayList();
             for (int i = 0; i < jTable1.getRowCount(); i++) {
+                if(jTable1.getValueAt(i, 1)==null){
+                    jTable1.setValueAt("No especificado", i, 1);
+                }
                 ListaServer client = new ListaServer(jTable1.getValueAt(i, 0).toString(), jTable1.getValueAt(i, 1).toString(), jTable1.getValueAt(i, 2).toString());
                 lista1.add(client);
             }

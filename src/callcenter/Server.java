@@ -17,14 +17,10 @@ public class Server {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-//         ServerMain m = new ServerMain();
-//        m.setLocationRelativeTo(null);
-//        m.setVisible(true);
 
     }
 
     public void iniciar() {
-        float f=0.5f;
         ServerMain m = new ServerMain();
         m.setLocationRelativeTo(null);
         m.setVisible(true);

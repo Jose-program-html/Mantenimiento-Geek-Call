@@ -106,7 +106,7 @@ public class Contenido23 extends javax.swing.JInternalFrame {
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 550, 270));
 
-        jButton1.setBackground(new java.awt.Color(0, 51, 51));
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Agency FB", 1, 14)); // NOI18N
         jButton1.setText("Generar Reporte");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +114,7 @@ public class Contenido23 extends javax.swing.JInternalFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 340, -1, -1));
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 320, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel2.setMaximumSize(new java.awt.Dimension(630, 410));

@@ -128,7 +128,6 @@ public class Login extends javax.swing.JFrame {
                     Server s = new Server();
                     s.iniciar();
                     this.hide();
-
                 }
             }
         } else {

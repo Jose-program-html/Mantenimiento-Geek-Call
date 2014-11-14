@@ -22,7 +22,6 @@ public class hilo_cerrarsesion implements Runnable{
     private JLabel logout;
     private boolean entrada;
     private int value = 5;//retardo en milisegundos
-    private cambio i;
 
     /**
  * Constructor de clase

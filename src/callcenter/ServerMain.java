@@ -30,7 +30,7 @@ public final class ServerMain extends javax.swing.JFrame {
 //        setUndecorated(true);
         setLocationRelativeTo(null);
         fecha_hora();
-        
+        usuario(SuperUsuario.Variables_globales.getSession_tipo(),SuperUsuario.Variables_globales.getSesion_usuario());
     }
     public void fecha_hora()
     {
@@ -41,7 +41,13 @@ public final class ServerMain extends javax.swing.JFrame {
         hora.setOpaque(true);
         hora.setBackground(Color.black);
     }
-
+    
+    public void usuario(int tipo, String usuario){
+        if(tipo==0){
+            Pestana1.setEnabled(false);
+        }
+        Usuario.setText("Usuario: "+usuario);
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -61,6 +67,7 @@ public final class ServerMain extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         hora = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
+        Usuario = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -193,13 +200,19 @@ public final class ServerMain extends javax.swing.JFrame {
         hora.setForeground(new java.awt.Color(255, 0, 0));
         hora.setText("\"\"");
         hora.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204), 3));
-        getContentPane().add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 130, 30));
+        getContentPane().add(hora, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, 130, 30));
 
         fecha.setBackground(new java.awt.Color(255, 255, 255));
         fecha.setFont(new java.awt.Font("Monospaced", 1, 24)); // NOI18N
         fecha.setForeground(new java.awt.Color(255, 255, 255));
         fecha.setText("\"\"");
-        getContentPane().add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 30, 140, 30));
+        getContentPane().add(fecha, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 30, 140, 30));
+
+        Usuario.setFont(new java.awt.Font("Microsoft Tai Le", 0, 24)); // NOI18N
+        Usuario.setForeground(new java.awt.Color(255, 255, 255));
+        Usuario.setText("Usuario: ");
+        getContentPane().add(Usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 70, 220, 30));
+        Usuario.getAccessibleContext().setAccessibleName("Usuario");
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/fondo1v2.jpg"))); // NOI18N
         jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -337,9 +350,9 @@ public final class ServerMain extends javax.swing.JFrame {
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
         Supervisor.Login h = new Supervisor.Login();
         h.setLocationRelativeTo(null);
-        SuperUsuario.Variables_globales.sesion=false;
-        SuperUsuario.Variables_globales.sesion_usuario="";
-        SuperUsuario.Variables_globales.session_tipo=0;
+        SuperUsuario.Variables_globales.setSesion(false);
+        SuperUsuario.Variables_globales.setSesion_usuario("");
+        SuperUsuario.Variables_globales.setSession_tipo(0);
         this.dispose();
         h.setVisible(true);
     }//GEN-LAST:event_logoutMouseClicked
@@ -396,6 +409,7 @@ public final class ServerMain extends javax.swing.JFrame {
     private javax.swing.JLabel Pestana2;
     private javax.swing.JLabel Pestana3;
     private javax.swing.JLabel Pestana5;
+    private javax.swing.JLabel Usuario;
     private javax.swing.JLabel close;
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel hora;

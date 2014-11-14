@@ -196,7 +196,7 @@ public class Contenido12 extends javax.swing.JInternalFrame {
         try {
             mensaje = "<html><font color=#FFFFFF>Nuevo usuario";
             int hash=pass2.hashCode();
-            con.log(hash, usuario, hash);
+            con.join(usuario, hash,3);
             JOptionPane.showMessageDialog(null, mensaje, "Mensaje Informacion", JOptionPane.INFORMATION_MESSAGE);
             jTextField1.setText("");
             jTextField2.setText("");

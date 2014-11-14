@@ -315,8 +315,8 @@ public class AltaBases extends javax.swing.JFrame {
 
         boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/continuar1.png"))); // NOI18N
         boton1.setToolTipText("Presione aqui para continuar con el registro de la base de informacion");
-        boton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        boton1.setVerifyInputWhenFocusTarget(false);
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 boton1MouseClicked(evt);
@@ -328,7 +328,7 @@ public class AltaBases extends javax.swing.JFrame {
                 boton1MouseExited(evt);
             }
         });
-        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 370, 180, 40));
+        getContentPane().add(boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 365, 160, 70));
 
         botonayuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/botonayuda1.png"))); // NOI18N
         botonayuda.setToolTipText("¿Nececitas ayuda?");

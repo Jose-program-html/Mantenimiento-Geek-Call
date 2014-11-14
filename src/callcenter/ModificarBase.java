@@ -66,7 +66,6 @@ public class ModificarBase extends javax.swing.JFrame {
         baset.setBackground(new java.awt.Color(238, 255, 255));
         baset.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         baset.setForeground(new java.awt.Color(255, 255, 255));
-        baset.setCaretColor(new java.awt.Color(255, 255, 255));
         getContentPane().add(baset, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 190, 30));
 
         jLabel4.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
@@ -78,7 +77,6 @@ public class ModificarBase extends javax.swing.JFrame {
         submenut.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         submenut.setForeground(new java.awt.Color(255, 255, 255));
         submenut.setToolTipText("Submenu a modificar sin puntos. Ejemplo Menu 122 (base 1, menu 2, submenu 3)");
-        submenut.setCaretColor(new java.awt.Color(255, 255, 255));
         getContentPane().add(submenut, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 100, 180, 30));
 
         jScrollPane2.setBackground(new java.awt.Color(0, 51, 51));
@@ -90,7 +88,6 @@ public class ModificarBase extends javax.swing.JFrame {
         texto2.setForeground(new java.awt.Color(255, 255, 255));
         texto2.setRows(5);
         texto2.setBorder(null);
-        texto2.setCaretColor(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(texto2);
 
         getContentPane().add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 270, -1));
@@ -105,13 +102,11 @@ public class ModificarBase extends javax.swing.JFrame {
         texto1.setForeground(new java.awt.Color(255, 255, 255));
         texto1.setRows(5);
         texto1.setBorder(null);
-        texto1.setCaretColor(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(texto1);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 250, -1));
 
         boton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/continuar1.png"))); // NOI18N
-        boton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {

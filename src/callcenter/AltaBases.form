@@ -38,14 +38,10 @@
           <Image iconType="3" name="/recursos/continuar1.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Presione aqui para continuar con el registro de la base de informacion"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true" thickness="3"/>
-          </Border>
-        </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
         </Property>
+        <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
       </Properties>
       <Events>
         <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="boton1MouseClicked"/>
@@ -54,7 +50,7 @@
       </Events>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="390" y="370" width="180" height="40"/>
+          <AbsoluteConstraints x="480" y="365" width="160" height="70"/>
         </Constraint>
       </Constraints>
     </Component>
