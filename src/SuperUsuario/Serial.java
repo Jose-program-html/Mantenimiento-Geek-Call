@@ -246,18 +246,22 @@ public class Serial extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-
-        int contra1, contra2;
-        contra1 = String.valueOf(jPasswordField1.getPassword()).hashCode();
-        contra2 = String.valueOf(jPasswordField2.getPassword()).hashCode();
-        if (contra1 == contra2) {
-            this.dispose();
-            metodo.superusuario(jTextField7.getText(), contra1);
-            Administrador.Alta_usuarios_administrador m = new Administrador.Alta_usuarios_administrador();
-            m.setLocationRelativeTo(null);
-            m.setVisible(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden", "Contraseña", JOptionPane.WARNING_MESSAGE);
+        if (!jTextField7.getText().isEmpty()&&!jPasswordField1.getText().isEmpty()&&!jPasswordField2.getText().isEmpty()) {
+            int contra1, contra2;
+            contra1 = String.valueOf(jPasswordField1.getPassword()).hashCode();
+            contra2 = String.valueOf(jPasswordField2.getPassword()).hashCode();
+            if (contra1 == contra2) {
+                this.dispose();
+                metodo.superusuario(jTextField7.getText(), contra1);
+                Administrador.Alta_usuarios_administrador m = new Administrador.Alta_usuarios_administrador();
+                m.setLocationRelativeTo(null);
+                m.setVisible(true);
+            } else {
+                JOptionPane.showMessageDialog(null, "Las contraseñas no coinciden", "Contraseña", JOptionPane.WARNING_MESSAGE);
+            }
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Rellene todas las casillas de informacion", "Datos", JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

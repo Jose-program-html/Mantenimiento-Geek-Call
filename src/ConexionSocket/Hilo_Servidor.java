@@ -49,7 +49,9 @@ public class Hilo_Servidor extends Thread {
             while (!socket.isClosed()) {
                  envio.writeUTF(opciones[0]);
                  envio2.writeUTF(opciones[1]);
-                 opciones = metodo.respuestacaso(Integer.valueOf(recibo.readUTF()));
+                 String mensaje= recibo.readUTF();
+                 opciones = metodo.respuestacaso(Integer.valueOf(mensaje));
+                 System.out.println("Respuesta: "+mensaje);
                  while(!opciones[1].equals("0")){
                      envio.writeUTF(opciones[0]);
                      envio2.writeUTF(opciones[1]);

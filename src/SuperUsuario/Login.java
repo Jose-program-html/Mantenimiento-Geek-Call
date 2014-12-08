@@ -113,19 +113,19 @@ public class Login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         if (metodo.log(jComboBox1.getSelectedIndex(), jTextField1.getText(), jPasswordField1.getText().hashCode())) {
-            new Thread(new hilo_pogress(this.jProgressBar1, 100,true)).start();
+            new Thread(new hilo_pogress1(this.jProgressBar1, 100,true)).start();
             Server s = new Server();
             s.iniciar();
             this.hide();
         }
         else{
-            new Thread(new hilo_pogress(this.jProgressBar1, 100,false)).start();
+            new Thread(new hilo_pogress1(this.jProgressBar1, 100,false)).start();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1FocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusLost
         if (!jTextField1.getText().equals("")) {
-            new Thread(new hilo_pogress(this.jProgressBar1, 100,true)).start();
+            new Thread(new hilo_pogress1(this.jProgressBar1, 100,true)).start();
             if (!metodo.usuarioexiste(jComboBox1.getSelectedIndex(), jTextField1.getText())) {
                 JOptionPane.showMessageDialog(null, "Nombre de usuario no encontrado", "Usuario Incorrecto", JOptionPane.WARNING_MESSAGE);
             }

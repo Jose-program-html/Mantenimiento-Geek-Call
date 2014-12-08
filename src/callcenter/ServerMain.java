@@ -63,7 +63,7 @@ public final class ServerMain extends javax.swing.JFrame {
         Pestana1 = new javax.swing.JLabel();
         Pestana2 = new javax.swing.JLabel();
         Pestana3 = new javax.swing.JLabel();
-        Pestana5 = new javax.swing.JLabel();
+        Pestana4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         hora = new javax.swing.JLabel();
         fecha = new javax.swing.JLabel();
@@ -72,10 +72,8 @@ public final class ServerMain extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMaximumSize(new java.awt.Dimension(1000, 800));
         setMinimumSize(new java.awt.Dimension(700, 500));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(815, 560));
         setResizable(false);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
@@ -92,7 +90,7 @@ public final class ServerMain extends javax.swing.JFrame {
         PanelBotones.setMaximumSize(new java.awt.Dimension(820, 400));
         PanelBotones.setMinimumSize(new java.awt.Dimension(820, 400));
         PanelBotones.setOpaque(false);
-        getContentPane().add(PanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 160, 820, 420));
+        getContentPane().add(PanelBotones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 820, 400));
 
         close.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         close.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/x2.png"))); // NOI18N
@@ -177,20 +175,20 @@ public final class ServerMain extends javax.swing.JFrame {
         });
         getContentPane().add(Pestana3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 110, 160, -1));
 
-        Pestana5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/P5.png"))); // NOI18N
-        Pestana5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Pestana5.addMouseListener(new java.awt.event.MouseAdapter() {
+        Pestana4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/P5.png"))); // NOI18N
+        Pestana4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Pestana4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                Pestana5MouseClicked(evt);
+                Pestana4MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                Pestana5MouseEntered(evt);
+                Pestana4MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                Pestana5MouseExited(evt);
+                Pestana4MouseExited(evt);
             }
         });
-        getContentPane().add(Pestana5, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 160, -1));
+        getContentPane().add(Pestana4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 160, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/logito.png"))); // NOI18N
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, -1));
@@ -254,15 +252,15 @@ public final class ServerMain extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Pestana3MouseExited
 
-    private void Pestana5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana5MouseEntered
-        Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña5.png")));
-    }//GEN-LAST:event_Pestana5MouseEntered
+    private void Pestana4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana4MouseEntered
+        Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña5.png")));
+    }//GEN-LAST:event_Pestana4MouseEntered
 
-    private void Pestana5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana5MouseExited
+    private void Pestana4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana4MouseExited
         if(!touch3){
-            Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
+            Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
         }
-    }//GEN-LAST:event_Pestana5MouseExited
+    }//GEN-LAST:event_Pestana4MouseExited
 
     private void closeMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_closeMouseEntered
         close.setIcon(new ImageIcon(getClass().getResource("/recursos/x1.png")));
@@ -288,18 +286,20 @@ public final class ServerMain extends javax.swing.JFrame {
     }//GEN-LAST:event_logoutMouseExited
 
     private void Pestana1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana1MouseClicked
-        Pestana1.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña1.png")));
-        touch = true;
-        Pestana2.setIcon(new ImageIcon(getClass().getResource("/recursos/P2.png")));
-        touch1 = false;
-        Pestana3.setIcon(new ImageIcon(getClass().getResource("/recursos/P3.png")));
-        touch2 = false;
-        Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
-        touch3 = false;
-        Panel1 p1 = new Panel1();
-        PanelBotones.removeAll();
-        PanelBotones.add(p1);
-        p1.setVisible(true);
+        if (Pestana1.isEnabled()) {
+            Pestana1.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña1.png")));
+            touch = true;
+            Pestana2.setIcon(new ImageIcon(getClass().getResource("/recursos/P2.png")));
+            touch1 = false;
+            Pestana3.setIcon(new ImageIcon(getClass().getResource("/recursos/P3.png")));
+            touch2 = false;
+            Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
+            touch3 = false;
+            Panel1 p1 = new Panel1();
+            PanelBotones.removeAll();
+            PanelBotones.add(p1);
+            p1.setVisible(true);
+        }
     }//GEN-LAST:event_Pestana1MouseClicked
 
     private void Pestana2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana2MouseClicked
@@ -309,7 +309,7 @@ public final class ServerMain extends javax.swing.JFrame {
         touch1 = true;
         Pestana3.setIcon(new ImageIcon(getClass().getResource("/recursos/P3.png")));
         touch2 = false;
-        Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
+        Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
         touch3 = false;
         Panel2 p2 = new Panel2();
         PanelBotones.removeAll();
@@ -324,7 +324,7 @@ public final class ServerMain extends javax.swing.JFrame {
         touch1 = false;
         Pestana3.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña3.png")));
         touch2 = true;
-        Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
+        Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/P5.png")));
         touch3 = false;
         Panel3 p3 = new Panel3();
         PanelBotones.removeAll();
@@ -332,20 +332,20 @@ public final class ServerMain extends javax.swing.JFrame {
         p3.setVisible(true);
     }//GEN-LAST:event_Pestana3MouseClicked
 
-    private void Pestana5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana5MouseClicked
+    private void Pestana4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Pestana4MouseClicked
         Pestana1.setIcon(new ImageIcon(getClass().getResource("/recursos/P1.png")));
         touch = false;
         Pestana2.setIcon(new ImageIcon(getClass().getResource("/recursos/P2.png")));
         touch1 = false;
         Pestana3.setIcon(new ImageIcon(getClass().getResource("/recursos/P3.png")));
         touch2 = false;
-        Pestana5.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña5.png")));
+        Pestana4.setIcon(new ImageIcon(getClass().getResource("/recursos/pestaña5.png")));
         touch3 = true;
         Panel4 p4 = new Panel4();
         PanelBotones.removeAll();
         PanelBotones.add(p4);
         p4.setVisible(true);
-    }//GEN-LAST:event_Pestana5MouseClicked
+    }//GEN-LAST:event_Pestana4MouseClicked
 
     private void logoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_logoutMouseClicked
         Supervisor.Login h = new Supervisor.Login();
@@ -408,7 +408,7 @@ public final class ServerMain extends javax.swing.JFrame {
     private javax.swing.JLabel Pestana1;
     private javax.swing.JLabel Pestana2;
     private javax.swing.JLabel Pestana3;
-    private javax.swing.JLabel Pestana5;
+    private javax.swing.JLabel Pestana4;
     private javax.swing.JLabel Usuario;
     private javax.swing.JLabel close;
     private javax.swing.JLabel fecha;

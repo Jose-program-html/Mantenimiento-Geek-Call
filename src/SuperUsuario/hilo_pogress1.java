@@ -4,35 +4,33 @@
  * and open the template in the editor.
  */
 
-package Supervisor;
+package SuperUsuario;
 
 /**
  *
  * @author Lee
  */
-import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
 /**
  * @web http://www.jc-mouse.net
  * @author Mouse
  */
-public class hilo_pogress implements Runnable{
+public class hilo_pogress1 implements Runnable{
 
     private JProgressBar jProgressBar;
     private int i = 1;
     private int value = 50;//retardo en milisegundos
-    private callcenter.Server s;
-    private JFrame d;
+    private boolean log=true;
 
     /**
  * Constructor de clase
  */
-    public hilo_pogress( JProgressBar jProgressBar , int value, callcenter.Server s, JFrame d )
+    public hilo_pogress1( JProgressBar jProgressBar , int value , boolean log)
     {
         this.jProgressBar = jProgressBar;
         this.value = value;
-        this.s=s;
-        this.d=d;
+        this.log=log;
     }
 
     @Override
@@ -50,9 +48,9 @@ public class hilo_pogress implements Runnable{
             catch (InterruptedException e){ System.err.println( e.getMessage() ); }            
             //si el trabajo en paralelo a terminado        
         }
-        jProgressBar.setValue(0);
-        d.hide();
-        s.iniciar();
+        if(!log){
+            JOptionPane.showMessageDialog(null, "Nombre de usuario no encontrado", "Usuario Incorrecto", JOptionPane.WARNING_MESSAGE);
+        }
     }
 
 }

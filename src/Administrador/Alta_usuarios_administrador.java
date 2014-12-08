@@ -42,21 +42,20 @@ public class Alta_usuarios_administrador extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(300, 230));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPasswordField1.setBackground(new java.awt.Color(224, 253, 253));
         jPasswordField1.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 75, 105, -1));
 
         jLabel9.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel9.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
         jLabel9.setText("Repetir contraseña");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 119, -1, -1));
 
         jTextField7.setBackground(new java.awt.Color(224, 253, 253));
         jTextField7.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(255, 255, 255));
         jTextField7.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 jTextField7FocusLost(evt);
@@ -65,32 +64,30 @@ public class Alta_usuarios_administrador extends javax.swing.JFrame {
         getContentPane().add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 34, 105, -1));
 
         jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
         jLabel7.setText("Usuario");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(36, 37, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
 
         jLabel8.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel8.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
         jLabel8.setText("Contraseña");
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 78, -1, -1));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(0, 51, 51));
-        jButton2.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jButton2.setFont(new java.awt.Font("DokChampa", 0, 24)); // NOI18N
         jButton2.setText("Agregar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 150, 179, 38));
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 179, 38));
 
         jPasswordField2.setBackground(new java.awt.Color(224, 253, 253));
         jPasswordField2.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
-        jPasswordField2.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 116, 105, -1));
 
         jLabel10.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel10.setFont(new java.awt.Font("Courier New", 0, 14)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Microsoft JhengHei", 0, 14)); // NOI18N
         jLabel10.setText("Registro de Administrador");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 11, -1, -1));
 
@@ -99,7 +96,7 @@ public class Alta_usuarios_administrador extends javax.swing.JFrame {
         jLabel3.setMaximumSize(new java.awt.Dimension(678, 442));
         jLabel3.setMinimumSize(new java.awt.Dimension(678, 442));
         jLabel3.setPreferredSize(new java.awt.Dimension(678, 442));
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 210));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 460, 330));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

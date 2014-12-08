@@ -216,11 +216,17 @@ public class Contenido11 extends javax.swing.JInternalFrame {
         if (evt.getKeyCode() == KeyEvent.VK_ENTER) {
             try {
                 pass1 = jPasswordField3.getText();
-                jPasswordField1.setEditable(true);
-                jPasswordField1.requestFocus();
+                if(!"".equals(pass1)){
+                    jPasswordField1.setEditable(true);
+                    jPasswordField1.requestFocus();
+                }else{
+                    titulo = "Campo vacio!";
+                    mensaje = "<html><font color=#FFFFFF>Nombre invalido...";
+                    JOptionPane.showMessageDialog(this, mensaje, titulo, JOptionPane.INFORMATION_MESSAGE);
+                }
             } catch (Exception e) {
+            
             }
-
         }
     }//GEN-LAST:event_jPasswordField3KeyPressed
 

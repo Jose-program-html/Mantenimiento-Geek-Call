@@ -351,7 +351,7 @@ public class AltaBases extends javax.swing.JFrame {
         titulo.setText("Opciones del menu");
         titulo.setToolTipText("Numero de opciones en el menu que tendra la base de informacion");
         titulo.setIconTextGap(6);
-        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 230, 30));
+        getContentPane().add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 250, 30));
 
         titulo3.setFont(new java.awt.Font("Lucida Sans", 1, 10)); // NOI18N
         titulo3.setText("Menu ");
@@ -429,7 +429,6 @@ public class AltaBases extends javax.swing.JFrame {
         menu10.setToolTipText("Inserte aqui el nombre asignado para la base de informacion");
         getContentPane().add(menu10, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 330, 180, 30));
 
-        opc1.setBackground(new java.awt.Color(55, 97, 97));
         opc1.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc1.setMaximumRowCount(10);
         opc1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -438,7 +437,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 80, 50, 40));
 
-        opc2.setBackground(new java.awt.Color(55, 97, 97));
         opc2.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc2.setMaximumRowCount(10);
         opc2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -447,7 +445,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 50, 40));
 
-        opc3.setBackground(new java.awt.Color(55, 97, 97));
         opc3.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc3.setMaximumRowCount(10);
         opc3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -456,7 +453,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 50, 40));
 
-        opc4.setBackground(new java.awt.Color(55, 97, 97));
         opc4.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc4.setMaximumRowCount(10);
         opc4.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -465,7 +461,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc4, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 260, 50, 40));
 
-        opc5.setBackground(new java.awt.Color(55, 97, 97));
         opc5.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc5.setMaximumRowCount(10);
         opc5.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -474,7 +469,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc5, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 50, 40));
 
-        opc6.setBackground(new java.awt.Color(55, 97, 97));
         opc6.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc6.setMaximumRowCount(10);
         opc6.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -483,7 +477,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc6, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 80, 50, 40));
 
-        opc7.setBackground(new java.awt.Color(55, 97, 97));
         opc7.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc7.setMaximumRowCount(10);
         opc7.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -492,7 +485,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc7, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 140, 50, 40));
 
-        opc8.setBackground(new java.awt.Color(55, 97, 97));
         opc8.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc8.setMaximumRowCount(10);
         opc8.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -501,7 +493,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 200, 50, 40));
 
-        opc9.setBackground(new java.awt.Color(55, 97, 97));
         opc9.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc9.setMaximumRowCount(10);
         opc9.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
@@ -510,7 +501,6 @@ public class AltaBases extends javax.swing.JFrame {
         opc9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         getContentPane().add(opc9, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, 50, 40));
 
-        opc10.setBackground(new java.awt.Color(55, 97, 97));
         opc10.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         opc10.setMaximumRowCount(10);
         opc10.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));

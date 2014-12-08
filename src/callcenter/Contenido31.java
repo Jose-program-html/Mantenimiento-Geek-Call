@@ -3,9 +3,14 @@ package callcenter;
 import ConexionSocket.Hilo_Socket_Servidor;
 import EstructuraBD.conexion;
 import java.awt.Dimension;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JComponent;
 
@@ -25,6 +30,9 @@ public class Contenido31 extends javax.swing.JInternalFrame {
     private String fechafin_server = "";
     private JComponent Barra = ((javax.swing.plaf.basic.BasicInternalFrameUI) getUI()).getNorthPane();
     private Dimension dimBarra = null; 
+    private Hilo_Socket_Servidor miRunnable = new ConexionSocket.Hilo_Socket_Servidor();
+    private Thread hilo = new Thread (miRunnable);
+
     /**
      * Creates new form Contenido11
      */
@@ -115,7 +123,9 @@ public class Contenido31 extends javax.swing.JInternalFrame {
             con = new conexion();
             con.agregar("servidor", "inicio,empleado", fechaini_server + "," + SuperUsuario.Variables_globales.getSesion_usuario());
             SuperUsuario.Variables_globales.setServidor_status(true);
-            ((Hilo_Socket_Servidor) new Hilo_Socket_Servidor()).start();
+            hilo = new Thread (miRunnable);
+            hilo.start();
+            //((Hilo_Socket_Servidor) new Hilo_Socket_Servidor()).start();
         }
     }//GEN-LAST:event_boton1MouseClicked
 
@@ -130,12 +140,22 @@ public class Contenido31 extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_boton1MouseExited
 
     private void boton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseClicked
-        SuperUsuario.Variables_globales.setServidor_status(false);
-        Date date = new Date();
-        DateFormat hourdateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
-        fechafin_server = hourdateFormat.format(date);
-        con = new conexion();
-        con.actualizar("servidor", "fin", fechafin_server, "inicio");
+        if (SuperUsuario.Variables_globales.isServidor_status()) {
+            Date date = new Date();
+            DateFormat hourdateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+            fechafin_server = hourdateFormat.format(date);
+            con = new conexion();
+            con.actualizar("servidor", "fin", fechafin_server, "inicio='" + fechaini_server + "'");
+            int puerto = 10578;
+            try {
+                Socket sk = new Socket(InetAddress.getLocalHost(), puerto);
+                sk.close();
+                hilo.stop();
+            } catch (IOException ex) {
+                Logger.getLogger(Contenido31.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            SuperUsuario.Variables_globales.setServidor_status(false);
+        }
     }//GEN-LAST:event_boton2MouseClicked
 
     private void boton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MouseEntered

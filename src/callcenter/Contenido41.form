@@ -43,9 +43,6 @@
   <SubComponents>
     <Component class="javax.swing.JComboBox" name="menusbase">
       <Properties>
-        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="57" green="57" red="30" type="rgb"/>
-        </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Courier New" size="18" style="3"/>
         </Property>
@@ -74,7 +71,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="380" y="100" width="50" height="40"/>
+          <AbsoluteConstraints x="290" y="90" width="80" height="40"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -88,7 +85,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="150" width="560" height="30"/>
+          <AbsoluteConstraints x="40" y="150" width="560" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -102,7 +99,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="40" width="290" height="30"/>
+          <AbsoluteConstraints x="40" y="40" width="290" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -121,7 +118,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="360" y="40" width="190" height="30"/>
+          <AbsoluteConstraints x="300" y="40" width="270" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -131,11 +128,6 @@
           <Image iconType="3" name="/recursos/continuar1.png"/>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Presione aqui para continuar con el registro de la base de informacion"/>
-        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-            <LineBorder roundedCorners="true" thickness="3"/>
-          </Border>
-        </Property>
         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
           <Color id="Cursor de Mano"/>
         </Property>
@@ -161,7 +153,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="100" width="290" height="30"/>
+          <AbsoluteConstraints x="40" y="100" width="290" height="30"/>
         </Constraint>
       </Constraints>
     </Component>
@@ -182,7 +174,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="50" y="190" width="360" height="180"/>
+          <AbsoluteConstraints x="40" y="190" width="360" height="180"/>
         </Constraint>
       </Constraints>
 

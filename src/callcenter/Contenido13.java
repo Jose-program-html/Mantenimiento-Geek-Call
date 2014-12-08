@@ -184,6 +184,7 @@ public class Contenido13 extends javax.swing.JInternalFrame {
                 jPasswordField3.requestFocus();
             }
         } catch (HeadlessException e) {
+            
         }
 
     }//GEN-LAST:event_bajasMouseClicked

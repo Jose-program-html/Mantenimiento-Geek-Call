@@ -46,6 +46,7 @@ public class Login extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setBackground(java.awt.Color.white);
@@ -75,10 +76,8 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, 240, 30));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setFont(new java.awt.Font("Courier New", 3, 14)); // NOI18N
         jButton1.setText("Ingresar");
-        jButton1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -86,7 +85,6 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, 50));
 
-        jProgressBar1.setBackground(new java.awt.Color(153, 255, 255));
         jProgressBar1.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 240, 20));
 
@@ -115,19 +113,19 @@ public class Login extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextField1.setText(jTextField1.getText().trim());
         if (!jTextField1.getText().equals("")) {
-            new Thread(new hilo_pogress(this.jProgressBar1, 5)).start();
             if (metodo.usuarioexiste(jComboBox1.getSelectedIndex(), jTextField1.getText())) {
                 JOptionPane.showMessageDialog(null, "Nombre de usuario no encontrado", "Usuario Incorrecto", JOptionPane.WARNING_MESSAGE);
                 jTextField1.grabFocus();
             } else {
-                new Thread(new hilo_pogress(this.jProgressBar1, 100)).start();
                 if (metodo.log(jComboBox1.getSelectedIndex(), jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()).hashCode())) {
                     SuperUsuario.Variables_globales.setSesion(true);
                     SuperUsuario.Variables_globales.setSesion_usuario(jTextField1.getText());
                     SuperUsuario.Variables_globales.setSession_tipo(jComboBox1.getSelectedIndex());
                     Server s = new Server();
-                    s.iniciar();
-                    this.hide();
+                    new Thread(new hilo_pogress(this.jProgressBar1, 10,s,this)).start();
+                }
+                else{
+                    JOptionPane.showMessageDialog(null, "Contraseña incorrecta", "Error", JOptionPane.WARNING_MESSAGE);
                 }
             }
         } else {

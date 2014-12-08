@@ -102,8 +102,8 @@ public class login_superusu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         jTextField1.setText(jTextField1.getText().trim());
-        new Thread(new hilo_pogress(this.jProgressBar1, 100)).start();
         if (metodo.log(2, jTextField1.getText(), String.valueOf(jPasswordField1.getPassword()).hashCode())) {
+            new Thread(new hilo_pogress1(this.jProgressBar1, 100, true)).start();
             this.dispose();
             Administrador.Alta_usuarios_administrador m = new Administrador.Alta_usuarios_administrador();
             m.setLocationRelativeTo(null);

@@ -79,34 +79,32 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         });
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        menusbase.setBackground(new java.awt.Color(48, 87, 87));
         menusbase.setFont(new java.awt.Font("Courier New", 3, 18)); // NOI18N
         menusbase.setMaximumRowCount(10);
         menusbase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10" }));
         menusbase.setToolTipText("Numero de opciones en el menu que tendra la base de informacion");
         menusbase.setBorder(null);
         menusbase.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        getContentPane().add(menusbase, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, 50, 40));
+        getContentPane().add(menusbase, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 90, 80, 40));
 
         jLabel5.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel5.setText("Descripcion de voz del menu principal:");
         jLabel5.setToolTipText("Numero de opciones en el menu que tendra la base de informacion");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 150, 560, 30));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 560, 30));
 
         jLabel3.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel3.setText("Nombre de la base:");
         jLabel3.setToolTipText("Nombre de la base de informacion");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 290, 30));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 290, 30));
 
         nombrebase.setBackground(new java.awt.Color(224, 253, 253));
         nombrebase.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         nombrebase.setToolTipText("Inserte aqui el nombre asignado para la base de informacion");
         nombrebase.setBorder(null);
-        getContentPane().add(nombrebase, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 40, 190, 30));
+        getContentPane().add(nombrebase, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, 270, 30));
 
         boton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/continuar1.png"))); // NOI18N
         boton1.setToolTipText("Presione aqui para continuar con el registro de la base de informacion");
-        boton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -124,7 +122,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         jLabel4.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         jLabel4.setText("Menus totales:");
         jLabel4.setToolTipText("Numero de opciones en el menu que tendra la base de informacion");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 290, 30));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 290, 30));
 
         jScrollPane1.setBackground(new java.awt.Color(0, 51, 51));
         jScrollPane1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -137,7 +135,7 @@ public class Contenido41 extends javax.swing.JInternalFrame {
         descripcion.setBorder(null);
         jScrollPane1.setViewportView(descripcion);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 360, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 360, 180));
 
         botonayuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/botonayuda1.png"))); // NOI18N
         botonayuda.setToolTipText("¿Nececitas ayuda?");

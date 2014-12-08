@@ -72,7 +72,6 @@ public class Contenido43 extends javax.swing.JInternalFrame {
 
         base.setBackground(new java.awt.Color(235, 253, 253));
         base.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
-        base.setCaretColor(new java.awt.Color(255, 255, 255));
         base.setMaximumSize(new java.awt.Dimension(360, 80));
         base.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -86,7 +85,6 @@ public class Contenido43 extends javax.swing.JInternalFrame {
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 80, 290, 30));
 
         boton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/recursos/continuar1.png"))); // NOI18N
-        boton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
         boton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         boton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -108,7 +106,6 @@ public class Contenido43 extends javax.swing.JInternalFrame {
         submenu.setBackground(new java.awt.Color(235, 253, 253));
         submenu.setFont(new java.awt.Font("Courier New", 3, 24)); // NOI18N
         submenu.setToolTipText("Submenu a modificar sin puntos. Ejemplo Menu 122 (base 1, menu 2, submenu 3)");
-        submenu.setCaretColor(new java.awt.Color(255, 255, 255));
         submenu.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 submenuKeyPressed(evt);
